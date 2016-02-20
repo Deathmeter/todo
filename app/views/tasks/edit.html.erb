@@ -1,13 +1,25 @@
+<%= form_for([@project, @project.tasks.update]) do |f| %>
+  
 <p>
   <strong>Name:</strong>
   <%= task.name %>
 </p>
- 
+ <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
 <p>
   <strong>Status:</strong>     
   <%= task.status %>
 </p>
-
+<p>
+    <%= f.label :status%><br>
+    <%= f.text_area :status %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
 
 
 <p>
