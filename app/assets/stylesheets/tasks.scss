@@ -1,3 +1,31 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+table {
+
+border-collapse: collapse;
+    width: 1000px; /* Ширина таблицы */
+    border: 1px solid green; /* Рамка вокруг таблицы */
+    margin: auto; /* Выравниваем таблицу по центру окна  */
+    text-align: left;
+   }
+   td {
+   border: 1px solid black; /* Параметры рамки */
+   border-collapse: collapse;
+    text-align: left; /* Выравниваем текст по центру ячейки */
+
+   }
+   th {bgcolor: red;}
+   
+   .link {
+     font-size: 150%;
+   }
+
+   .gh {
+     font-size: 150%;
+   }
+   .btn-addproject {
+  background: url("./addproject.png") no-repeat scroll 0 0 transparent;
+  padding:19px 103px 9px 120px;
+  border:none;
+}

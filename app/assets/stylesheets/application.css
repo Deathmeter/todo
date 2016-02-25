@@ -13,3 +13,70 @@
  *= require_tree .
  *= require_self
  */
+
+.btn-addproject {
+  background: url("./addproject.png") no-repeat scroll 0 0 transparent;
+  padding:19px 103px 9px 120px;
+  border:none;
+}
+
+.delete-task {
+  background: url("./projdelete.png") no-repeat scroll 0 0 transparent;
+  padding:1px 5px 1px 15px;
+  border:none;
+  margin: 5px;
+
+}
+
+.edit-project {
+  background: url("./projedit.png") no-repeat scroll 0 0 transparent;
+  padding:1px 5px 1px 15px;
+  border:none;
+  
+  
+}
+
+table {
+	table-layout: fixed;
+    width:100%;
+    width: 1000px; /* Ширина таблицы */
+    margin: auto; /* Выравниваем таблицу по центру окна  */
+    text-align: center;
+    
+
+   }
+   td {
+   	word-wrap:break-word;
+   border-collapse: collapse;
+    text-align: left; /* Выравниваем текст по центру ячейки */
+
+   }
+   th {bgcolor: red;
+   
+  }
+   
+   .link {
+
+     font-size: 100%;
+   }
+
+   .gh {
+     font-size: 150%;
+   }
+   h2{ word-wrap: break-word; }
+   
+   table {
+    table-layout: fixed;
+    width:75%
+}
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+}
+
+
+
+    

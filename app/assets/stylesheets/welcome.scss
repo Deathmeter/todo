@@ -1,3 +1,22 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+table {
+    width: 1000px; /* Ширина таблицы */
+    border: 1px solid green; /* Рамка вокруг таблицы */
+    margin: auto; /* Выравниваем таблицу по центру окна  */
+    text-align: left;
+   }
+   td {
+   border-collapse: collapse;
+    text-align: left; /* Выравниваем текст по центру ячейки */
+   }
+   th {bgcolor: red;}
+   
+   .link {
+     font-size: 150%;
+   }
+
+   .gh {
+     font-size: 150%;
+   }

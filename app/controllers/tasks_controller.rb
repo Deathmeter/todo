@@ -1,5 +1,11 @@
 class TasksController < ApplicationController
+	before_action :authenticate_user!
 	
+	def edit
+      @project = Project.find(params[:project_id])	
+	  @task = @project.tasks.find(params[:id])
+	end
+
 	def create
 	  @project = Project.find(params[:project_id])	
 	  @task = @project.tasks.create(task_params)
@@ -8,16 +14,31 @@ class TasksController < ApplicationController
 
 	def update
 	  @project = Project.find(params[:project_id])	
-	  @task = @project.tasks.update(task_params)
+	  @task = @project.tasks.find(params[:id])
+
+	  if @task.update(task_params)
 	  redirect_to project_path(@project)
+	else 
+		render 'edit'
 	end
+end
+
+
+
+
+
+
+
+
+
+
 
 
 	def destroy
       @project = Project.find(params[:project_id])
       @task = @project.tasks.find(params[:id])
       @task.destroy
-      redirect_to projects_path
+      redirect_to project_path(@project)
     end
 
 	private

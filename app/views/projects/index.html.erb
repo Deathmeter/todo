@@ -1,19 +1,68 @@
-<h1>Listing projects</h1>
- <%= link_to 'My Project', controller: 'projects' %>
- <%= link_to 'New project', new_project_path %>
+<script type="text/javascript">
+function clock() {
+var d = new Date();
+var month_num = d.getMonth()
+var day = d.getDate();
+var hours = d.getHours();
+var minutes = d.getMinutes();
+var seconds = d.getSeconds();
+
+month=new Array("января", "февраля", "марта", "апреля", "мая", "июня",
+"июля", "августа", "сентября", "октября", "ноября", "декабря");
+
+if (day <= 9) day = "0" + day;
+if (hours <= 9) hours = "0" + hours;
+if (minutes <= 9) minutes = "0" + minutes;
+if (seconds <= 9) seconds = "0" + seconds;
+
+date_time = "Сегодня - " + day + " " + month[month_num] + " " + d.getFullYear() +
+" г.&nbsp;&nbsp;&nbsp;Текущее время - "+ hours + ":" + minutes + ":" + seconds;
+if (document.layers) {
+ document.layers.doc_time.document.write(date_time);
+ document.layers.doc_time.document.close();
+}
+else document.getElementById("doc_time").innerHTML = date_time;
+ setTimeout("clock()", 1000);
+}
+</script>
+
+
+
+<h1 align = center>Listing projects</h1>
+
+ <h2><%= link_to 'New project', new_project_path, class: "link"%></h2>
 <table>
   <tr>
-    <th>Name</th>
+    <th bgcolor="#587BCE">Name</th>
   </tr>
- 
   <% @projects.each do |project| %>
+  </table>
+    <table>
     <tr>
-      <td><%= project.name %></td>
-      <td><%= link_to 'Show', project_path(project) %></td>
-      <td><%= link_to 'Edit', edit_project_path(project) %></td>
-      <td><%= link_to 'Destroy', project_path(project),
+      <td width="40px" border-right-style="double" white-space: nowrap;></td>
+      <td width="700px"><%= project.name %></td>
+      
+      <td align=right width="100px"><%= link_to 'Show Tasks', project_path(project) %></td>
+      <td align=right width="40px"><%= link_to 'Edit', edit_project_path(project) %></td>
+      <td white-space: nowrap; align=right width="50px"><%= link_to 'Delete', project_path(project),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
+              
+
     </tr>
   <% end %>
 </table>
+
+ <%= link_to 'Sing out', destroy_user_session_path %>
+<%= link_to 'Back', projects_path %>
+
+ <div class="footer">
+<span id="doc_time">
+ Дата и время
+</span>
+<script type="text/javascript">
+ clock();
+</script>
+</div>
+
+

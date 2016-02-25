@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+	before_action :authenticate_user!
+
 	def index
 	  @projects = Project.all
 	end
@@ -19,7 +21,7 @@ class ProjectsController < ApplicationController
       @project = Project.new(project_params)
 
       if @project.save
-        redirect_to @project
+        redirect_to projects_path
     else
     	render 'new'
 	end
