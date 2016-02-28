@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
@@ -47,3 +49,4 @@ end
 
 gem 'rails_12factor', group: :production
 
+ruby "2.0.0p647"
