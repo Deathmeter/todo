@@ -1,3 +1,38 @@
+<body class="gradient">
+<h1 align="center">TODO LISTS</h1>
+
+<table border="2px solid white" class="gradient">
+  
+  <% @projects.each do |project| %>
+  </table>
+    <table>
+    <tr>
+
+      <td width="700px"><%= project.name %></td>
+      <td align=right width="100px"><%= link_to 'Show Tasks', project_path(project) %></td>
+      <td align=right width="20px"><%= link_to '', edit_project_path(project), :class => 'edit-project'%></td>
+      <td white-space: nowrap; align=right width="20px"><%= link_to '', project_path(project),
+              method: :delete,
+              data: { confirm: 'Are you sure?' }, :class => 'delete-task' %></td>
+    </tr>
+  <% end %>
+</table>
+
+<table style="border: 0px; margin-top: 2%">
+  <tr>
+    <th><h2><%= link_to '', new_project_path, :class => 'btn-addproject'%></h2></th>
+  </tr>
+  </table>
+
+<%= link_to 'Sing out', destroy_user_session_path %>
+<%= link_to 'Back', projects_path %>
+
+
+
+
+
+
+
 <script type="text/javascript">
 function clock() {
 var d = new Date();
@@ -25,37 +60,6 @@ else document.getElementById("doc_time").innerHTML = date_time;
  setTimeout("clock()", 1000);
 }
 </script>
-
-
-
-<h1 align = center>Listing projects</h1>
-
- <h2><%= link_to 'New project', new_project_path, class: "link"%></h2>
-<table>
-  <tr>
-    <th bgcolor="#587BCE">Name</th>
-  </tr>
-  <% @projects.each do |project| %>
-  </table>
-    <table>
-    <tr>
-      <td width="40px" border-right-style="double" white-space: nowrap;></td>
-      <td width="700px"><%= project.name %></td>
-      
-      <td align=right width="100px"><%= link_to 'Show Tasks', project_path(project) %></td>
-      <td align=right width="40px"><%= link_to 'Edit', edit_project_path(project) %></td>
-      <td white-space: nowrap; align=right width="50px"><%= link_to 'Delete', project_path(project),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-              
-
-    </tr>
-  <% end %>
-</table>
-
- <%= link_to 'Sing out', destroy_user_session_path %>
-<%= link_to 'Back', projects_path %>
-
  <div class="footer">
 <span id="doc_time">
  Дата и время
@@ -64,5 +68,6 @@ else document.getElementById("doc_time").innerHTML = date_time;
  clock();
 </script>
 </div>
+</body>
 
 

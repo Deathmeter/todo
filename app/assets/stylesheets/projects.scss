@@ -4,17 +4,22 @@ border-collapse: collapse;
     border: 1px solid green; /* Рамка вокруг таблицы */
     margin: auto; /* Выравниваем таблицу по центру окна  */
     text-align: left;
+
    }
+
+
    td {
    border: 1px solid black; /* Параметры рамки */
    border-collapse: collapse;
     text-align: left; /* Выравниваем текст по центру ячейки */
 
    }
-   th {bgcolor: red;}
+   th {bgcolor: red;
+   }
    
    .link {
      font-size: 150%;
+
    }
 
    .gh {

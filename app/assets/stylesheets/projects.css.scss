@@ -1,3 +1,5 @@
+
+
 table {
 border-collapse: collapse;
     width: 1000px; /* Ширина таблицы */
@@ -11,7 +13,8 @@ border-collapse: collapse;
     text-align: left; /* Выравниваем текст по центру ячейки */
 
    }
-   th {bgcolor: red;}
+   th {
+   bgcolor: red;}
    
    .link {
      font-size: 150%;

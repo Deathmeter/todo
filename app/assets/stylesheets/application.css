@@ -14,6 +14,21 @@
  *= require_self
  */
 
+body {
+  margin: 0;
+}
+   .gradient {
+    
+    background: linear-gradient(to top, orange, grey);
+    padding: 10px;
+    margin: 0px;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 40%;
+   }
+  
+
 .btn-addproject {
   background: url("./addproject.png") no-repeat scroll 0 0 transparent;
   padding:19px 103px 9px 120px;
@@ -31,7 +46,7 @@
 .edit-project {
   background: url("./projedit.png") no-repeat scroll 0 0 transparent;
   padding:1px 5px 1px 15px;
-  border:none;
+  border: none;
   
   
 }
@@ -42,8 +57,11 @@ table {
     width: 1000px; /* Ширина таблицы */
     margin: auto; /* Выравниваем таблицу по центру окна  */
     text-align: center;
-    
 
+   }
+
+   body { 
+    margin: 0; /* Убираем отступы */
    }
    td {
    	word-wrap:break-word;
@@ -51,13 +69,18 @@ table {
     text-align: left; /* Выравниваем текст по центру ячейки */
 
    }
-   th {bgcolor: red;
-   
-  }
+   th {}
    
    .link {
 
      font-size: 100%;
+      background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-spacing: 0;
    }
 
    .gh {
@@ -69,13 +92,18 @@ table {
     table-layout: fixed;
     width:75%
 }
+
+
 .footer {
-  position: absolute;
+  position: left;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 200px;
 }
+
+
+
 
 
 

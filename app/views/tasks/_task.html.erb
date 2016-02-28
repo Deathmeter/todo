@@ -1,14 +1,14 @@
 <table>
   <tr>
-    <td width="35px">
+    <td width="100px">
       <strong >Name</strong></td>
-      <td width="300px"><%= task.name %>
+      <td width="250px"><%= task.name %>
     </td>
 
-    <td align=right width="105px"><strong align=right>Status:</strong>     
+    <td align=right width="200x"><strong align=right>Status:</strong>     
       <%= task.status %>  
 
-    <td style="width: 30px;"><%= link_to '', edit_project_task_path(task.project, task), :class => 'edit-project' %>
+    <td style="width: 40px;"><%= link_to '', edit_project_task_path(task.project, task), :class => 'edit-project' %>
         <%= link_to '', [task.project, task],
                method: :delete,
                data: { confirm: 'Are you sure?' }, :class => 'delete-task' %>
