@@ -16,10 +16,11 @@
   <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
+    
   </p>
  
   <p>
-    <%= f.submit nil, :class => 'edit-project', :value=>"" %>
+    <%= f.submit nil, :value=>"Update Project" %>
   </p>
 <% end %>
 <%= link_to 'Back', projects_path %>
